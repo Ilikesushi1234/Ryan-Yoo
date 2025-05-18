@@ -1,0 +1,213 @@
+/* Creekside Trails - Final Styles */
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHZjcmViYnFtZmU2aW5wMDhkdW8yN2Zkcm9xb2c5cmNvZXBrZGN4NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o85xEfx9JC73A6gq4/giphy.gif') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.primary-btn {
+  background: #006d77;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #004f4b;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- MAP & WEATHER SECTION --- */
+.map-weather-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin: 3rem 2rem;
+}
+
+.map-section,
+.right-panel,
+.map-section,
+.identify-species,
+.smart-audio-guide-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Weather Card */
+.conditions-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.conditions-info {
+  flex: 1;
+}
+
+.temperature {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0077aa;
+}
+
+.location {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0077aa;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.trail-status {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00aa66;
+  background: #e0ffe0;
+  border: 2px solid #00aa66;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* --- ACTIVITIES SECTION --- */
+.challenge-card {
+  background: #f5f5f5;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* --- TRAIL SAFETY & REPORT --- */
+.map-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* --- IDENTIFY SPECIES --- */
+.identify-species {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin: 2rem;
+  text-align: center;
+}
+
+/* Upload button inside */
+.stFileUploader {
+  margin-top: 1rem;
+}
+
+/* --- SMART AUDIO GUIDE --- */
+.smart-audio-guide-section {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.audio-guide-box {
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  flex: 1;
+}
+
+.audio-guide-box p {
+  margin: 0;
+}
+
+/* --- EMERGENCY BAR --- */
+.emergency-bar {
+  background: #d00000;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .map-weather-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .smart-audio-guide-section {
+    flex-direction: column;
+  }
+}
